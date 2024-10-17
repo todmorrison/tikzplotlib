@@ -1,8 +1,8 @@
 import matplotlib as mpl
 import numpy as np
-from matplotlib.backends.backend_pgf import (
-    common_texification as mpl_common_texification,
-)
+
+# see https://stackoverflow.com/a/78124924
+from matplotlib.backends.backend_pgf import _tex_escape as mpl_common_texification
 
 from . import _color
 

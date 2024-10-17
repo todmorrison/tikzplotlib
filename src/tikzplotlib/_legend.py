@@ -78,7 +78,8 @@ def draw_legend(data, obj):
     if alignment:
         data["current axes"].axis_options.append(f"legend cell align={{{alignment}}}")
 
-    if obj._ncol != 1:
+    # see https://github.com/nschloe/tikzplotlib/pull/558
+    if obj._ncols != 1:
         data["current axes"].axis_options.append(f"legend columns={obj._ncol}")
 
     # Write styles to data
